@@ -40,9 +40,9 @@ import java.net.ConnectException;
 /**
  * A specialized {@link org.openqa.selenium.remote.HttpCommandExecutor} that will use a
  * {@link PhantomJSDriverService} that lives and dies with a single WebDriver session.
- * <p/>
+ * 
  * The service will be restarted upon each new session request and shutdown after each quit command.
- * <p/>
+ * 
  * NOTE: Yes, the design of this class is heavily inspired by
  * {@link org.openqa.selenium.chrome.ChromeCommandExecutor}.
  *

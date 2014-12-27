@@ -47,7 +47,7 @@ import static com.google.common.base.Preconditions.*;
 /**
  * Service that controls the life-cycle of a PhantomJS in Remote WebDriver mode.
  * The Remote WebDriver is implemented via GhostDriver.
- * <p/>
+ * 
  * NOTE: Yes, the design of this class is heavily inspired by {@link org.openqa.selenium.chrome.ChromeDriverService}.
  *
  * @author Ivan De Marino <http://ivandemarino.me>
@@ -155,7 +155,7 @@ public class PhantomJSDriverService extends DriverService {
 
     /**
      * Configures and returns a new {@link PhantomJSDriverService} using the default configuration.
-     * <p/>
+     * 
      * In this configuration, the service will use the PhantomJS executable identified by the the
      * following capability, system property or PATH environment variables:
      * <ul>
@@ -165,7 +165,7 @@ public class PhantomJSDriverService extends DriverService {
      *          (Optional - without will use GhostDriver internal to PhantomJS)
      *      </li>
      * </ul>
-     * <p/>
+     * 
      * Each service created by this method will be configured to find and use a free port on the current system.
      *
      * @return A new ChromeDriverService using the default configuration.
@@ -198,7 +198,7 @@ public class PhantomJSDriverService extends DriverService {
 
     /**
      * Same as {@link PhantomJSDriverService#createDefaultService(org.openqa.selenium.Capabilities)}.
-     * <p/>
+     * 
      * In this case PhantomJS or GhostDriver can't be searched within the Capabilities, only System
      * Properties.
      *
@@ -211,7 +211,7 @@ public class PhantomJSDriverService extends DriverService {
     /**
      * Looks into the Capabilities, the current $PATH and the System Properties for
      * {@link PhantomJSDriverService#PHANTOMJS_EXECUTABLE_PATH_PROPERTY}.
-     * <p/>
+     * 
      * NOTE: If the Capability, the $PATH and the System Property are set, the Capability takes
      * priority over the System Property, that in turn takes priority over the $PATH.
      *
@@ -248,10 +248,10 @@ public class PhantomJSDriverService extends DriverService {
 
     /**
      * Find the GhostDriver main file (i.e. <code>"main.js"</code>).
-     * <p/>
+     * 
      * Looks into the Capabilities and the System Properties for
      * {@link PhantomJSDriverService#PHANTOMJS_GHOSTDRIVER_PATH_PROPERTY}.
-     * <p/>
+     * 
      * NOTE: If both the Capability and the System Property are set, the Capability takes priority.
      *
      * @param desiredCapabilities Capabilities in which we will look for the path to GhostDriver
@@ -399,7 +399,7 @@ public class PhantomJSDriverService extends DriverService {
 
         /**
          * Configures the service to use a specific Proxy configuration.
-         * <p/>
+         * 
          * NOTE: Usually the proxy configuration is passed to the Remote WebDriver via WireProtocol
          * Capabilities. PhantomJS doesn't yet support protocol configuration at runtime: it
          * requires it to be defined on launch.
